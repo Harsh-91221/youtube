@@ -20,6 +20,9 @@ const appRouter = createBrowserRouter([{
     },
   ]
 }]);
+appRouter.use(cors({
+  origin: "https://youtube-git-master-harsh91221s-projects.vercel.app/",
+}))
 function App() {
   return (
     <Provider store={store}>
