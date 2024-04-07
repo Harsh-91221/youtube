@@ -8,7 +8,6 @@ const Header = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const [suggestions, setSuggestions] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
-    const cors = require("cors");
 
     const searchCache = useSelector((store) => store.search);
     const dispatch = useDispatch();
@@ -36,10 +35,6 @@ const Header = () => {
             })
         );
     };
-    getSearchSugsestions.use(cors({
-        origin: "https://youtube-git-master-harsh91221s-projects.vercel.app/",
-        methods: ["GET", "POST"],
-    }))
     const toggleMenuHandler = () => {
         dispatch(toggleMenu());
     };
