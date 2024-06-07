@@ -1,4 +1,5 @@
 import React from 'react';
+import { numFormatter } from '../utils/constants';
 
 const VideoCard = ({ info }) => {
     if (!info) {
@@ -13,12 +14,18 @@ const VideoCard = ({ info }) => {
         return <div>No thumbnail information available</div>;
     }
     return (
-        <div className='p-2 m-2 w-72 shadow-lg'>
-            <img className='rounded-lg' alt='thumbnails' src={thumbnails.medium.url}></img>
-            <ul>
-                <li className='font-bold py-2'>{title}</li>
-                <li>{channelTitle}</li>
-                <li>{statistics && statistics.viewCount} views</li>
+        <div className="flex flex-col mx-2 my-4 gap-2 shadow-lg w-[310px] h-[260px]   rounded-xl  ">
+            <div>
+                <img className="rounded-xl " src={thumbnails.medium.url} alt="thumbnail" />
+            </div>
+            <ul className="flex flex-col  p-2 w-full">
+                <li className="font-semibold text-md   truncate overflow-hidden">
+                    {title}
+                </li>
+                <li className="text-sm text-gray-500 truncate">{channelTitle}</li>
+                <ul className="flex gap-3 text-xs">
+                    <li>{statistics && numFormatter(statistics.viewCount)} views</li>
+                </ul>
             </ul>
         </div>
     );

@@ -2,14 +2,12 @@ import React from 'react'
 
 const ChatMessage = ({ name, message }) => {
     return (
-        <div className='flex items-center shadow-sm'>
-            <img
-                className="h-8"
-                alt="user"
-                src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
-            />
-            <span className='font-bold px-1'>{name}</span>
-            <span>{message}</span>
+        <div className="flex  gap-2 width-full p-1 rounded-lg px-2  items-center ">
+            <p className="w-[30px] h-8 rounded-full bg-black text-white font-bold text-center p-1">{name.substring(0,1)}</p>
+        <div className='<div className="flex  flex-wrap items-center gap-1">'>
+            <p className="font-semibold">{name}</p>
+        <p className="text-sm">{message}</p>
+        </div>
         </div>
     )
 }

@@ -7,11 +7,11 @@ const commentsData = [
     },
     {
         name: "Batman",
-        text: "Atleast I'm rich",
+        text: "Got my Automobile",
         replies: [
             {
                 name: "Harsh Chaudhary",
-                text: "Mai toh na sehta",
+                text: "Cool",
                 replies: [],
             },
             {
@@ -32,7 +32,7 @@ const commentsData = [
                                         replies: [
                                             {
                                                 name: "Batman",
-                                                text: "Do you bleed?",
+                                                text: "Do you know?",
                                                 replies: [],
                                             },
                                         ],
@@ -57,7 +57,7 @@ const commentsData = [
     },
     {
         name: "tourist",
-        text: "Codeforces Div 1 was easy af",
+        text: "Codeforces Div 1 was easy",
         replies: [],
     },
     {
@@ -72,7 +72,7 @@ const commentsData = [
     },
     {
         name: "Harsh Chaudhary",
-        text: "You guys solved?",
+        text: "Nice",
         replies: [],
     },
 ];

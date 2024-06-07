@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { toggleMenu } from '../utils/appSlice';
 import { YOUTUBE_SEARCH_API } from '../utils/constants';
 import { cacheResults } from '../utils/searchSlice';
+import { GrSearch } from "react-icons/gr";
 
 const Header = () => {
     const [searchQuery, setSearchQuery] = useState("");
@@ -66,8 +67,8 @@ const Header = () => {
                         onFocus={() => setShowSuggestions(true)}
                         onBlur={() => setShowSuggestions(false)}
                     />
-                    <button className="border border-gray-400 px-5 py-2 rounded-r-full bg-gray-100">
-                        🔍
+                    <button className="px-4 p-3 rounded-r-full bg-gray-100 border border-gray-400">
+                        <GrSearch />
                     </button>
                 </div>
                 {showSuggestions && (
@@ -75,7 +76,7 @@ const Header = () => {
                         <ul>
                             {suggestions.map((s) => (
                                 <li key={s} className="py-2 px-3 shadow-sm hover:bg-gray-100">
-                                    🔍 {s}
+                                    <GrSearch /> {s}
                                 </li>
                             ))}
                         </ul>
@@ -93,5 +94,4 @@ const Header = () => {
     );
 };
 
-
-export default Header
+export default Header;
